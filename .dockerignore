@@ -1,0 +1,9 @@
+.vscode
+artifacts
+build
+cache
+docs
+node_modules
+scripts
+test
+docs
