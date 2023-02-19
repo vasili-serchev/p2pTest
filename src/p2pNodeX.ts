@@ -3,13 +3,7 @@ import { createNetwork } from "./networkInit";
 import { P2PMessage, TransferData, TransferDataPackage } from "./transfers";
 
 /**
- * Peer-to-peer communication between oracle nodes
- * Receives price updates and stores them in Redis
- * - listens to redis updates for prices "px-local", a redis-channel by the price feed
- *      - broadcasts price updates to the network
- * - listens to updated prices from the p2p network
- * - aggregates the prices (median) and changes the redis-reported median if
- *   the stored value falls outside the neighbors of the current median
+ * Peer-to-peer communication between nodes
  */
 export default class P2PNode {
     private net: Network<P2PMessage> | undefined;
